@@ -1,0 +1,61 @@
+html,
+body {
+  margin: 0;
+}
+
+.operator-button-color {
+  background-color: rgb(160, 161, 160);
+}
+.operator-button-color:hover {
+  background-color: rgb(170, 171, 170);
+}
+
+.operator-button-color-pressed {
+  background-color: yellow;
+}
+.operator-button-color-pressed:hover {
+  background-color: rgb(255, 255, 10);
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.calcWrapper {
+  width: 350px;
+  height: 568.75px;
+  background-color: grey;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.calcGrid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.5fr repeat(5, 1fr);
+  grid-template-areas: "result result result result" "backslash CE C division" "one two three multiplication" "four five six reduction" "seven eight nine addition" "plus-minus zero dot equals";
+  gap: 0.7rem;
+}
+.calcGrid div {
+  background-color: rgb(160, 161, 160);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+.calcGrid div:not(div[class=result]) {
+  cursor: pointer;
+}
+.calcGrid div:not(div[class=result]):hover {
+  background-color: rgb(170, 171, 170);
+}
+
+.result {
+  grid-area: result;
+}/*# sourceMappingURL=calc.css.map */

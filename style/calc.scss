@@ -1,0 +1,73 @@
+$clacWidth: 350px;
+$calcHeight: $clacWidth * 1.625;
+
+html,
+body {
+  margin: 0;
+}
+
+.operator-button-color {
+  background-color: rgb(160, 161, 160);
+  &:hover {
+    background-color: rgb(160+10, 161+10, 160+10);
+  }
+}
+
+.operator-button-color-pressed {
+  background-color: yellow;
+  !important &:hover {
+    background-color: rgb(255, 255, 10);
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.calcWrapper {
+  width: $clacWidth;
+  height: $calcHeight;
+  background-color: grey;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.calcGrid {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1.5fr repeat(5, 1fr);
+  grid-template-areas:
+    "result result result result"
+    "backslash CE C division"
+    "one two three multiplication"
+    "four five six reduction"
+    "seven eight nine addition"
+    "plus-minus zero dot equals";
+  gap: 0.7rem;
+
+  div {
+    background-color: rgb(160, 161, 160);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+
+    &:not(div[class="result"]) {
+      cursor: pointer;
+    }
+
+    &:not(div[class="result"]):hover {
+      background-color: rgb(160+10, 161+10, 160+10);
+    }
+  }
+}
+
+.result {
+  grid-area: result;
+}

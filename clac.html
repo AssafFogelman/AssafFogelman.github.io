@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/calc.css" />
+    <title>Assaf's Second Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calcWrapper">
+        <div class="calcGrid">
+          <div class="result" id="result">0</div>
+          <div class="backslash" id="backslash" onclick="backSlash()"><-</div>
+          <div class="CE" id="CE" onclick="CE()">CE</div>
+          <div class="C" id="C" onclick="C()">C</div>
+          <div class="division" id="division" onclick="operatorInput('/')">
+            /
+          </div>
+          <div class="one" id="one" onclick="buildNumber('1')">1</div>
+          <div class="two" id="two" onclick="buildNumber('2')">2</div>
+          <div class="three" id="three" onclick="buildNumber('3')">3</div>
+          <div
+            class="multiplication"
+            id="multiplication"
+            onclick="operatorInput('*')"
+          >
+            *
+          </div>
+          <div class="four" id="four" onclick="buildNumber('4')">4</div>
+          <div class="five" id="five" onclick="buildNumber('5')">5</div>
+          <div class="six" id="six" onclick="buildNumber('6')">6</div>
+          <div class="reduction" id="reduction" onclick="operatorInput('-')">
+            -
+          </div>
+          <div class="seven" id="seven" onclick="buildNumber('7')">7</div>
+          <div class="eight" id="eight" onclick="buildNumber('8')">8</div>
+          <div class="nine" id="nine" onclick="buildNumber('9')">9</div>
+          <div class="addition" id="addition" onclick="operatorInput('+')">
+            +
+          </div>
+          <div class="plus-minus" id="plus-minus" onclick="plusMinus()">
+            +/-
+          </div>
+          <div class="zero" id="zero" onclick="buildNumber('0')">0</div>
+          <div class="dot" id="dot" onclick="buildNumber('.')">.</div>
+          <div class="equals" id="equals" onclick="equalsWasPressed()">=</div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/calc.js"></script>
+  </body>
+</html>
